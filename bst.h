@@ -493,6 +493,8 @@ void BinarySearchTree<Key, Value>::insert(const std::pair<const Key, Value> &key
       return;
     }
 
+    print(); //testing
+
     Node<Key, Value>* current = root_;
     Node<Key, Value>* parent = NULL;
 

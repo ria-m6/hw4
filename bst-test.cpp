@@ -2,6 +2,7 @@
 #include <map>
 #include "bst.h"
 #include "avlbst.h"
+#include "print_bst.h"
 
 using namespace std;
 
@@ -9,27 +10,31 @@ using namespace std;
 int main(int argc, char *argv[])
 {
     // Binary Search Tree tests
-    BinarySearchTree<char,int> bt;
-    bt.insert(std::make_pair('a',1));
-    bt.insert(std::make_pair('b',2));
+    // BinarySearchTree<char,int> bt;
+    // bt.insert(std::make_pair('a',1));
+    // bt.insert(std::make_pair('b',2));
     
-    cout << "Binary Search Tree contents:" << endl;
-    for(BinarySearchTree<char,int>::iterator it = bt.begin(); it != bt.end(); ++it) {
-        cout << it->first << " " << it->second << endl;
-    }
-    if(bt.find('b') != bt.end()) {
-        cout << "Found b" << endl;
-    }
-    else {
-        cout << "Did not find b" << endl;
-    }
-    cout << "Erasing b" << endl;
-    bt.remove('b');
+    // cout << "Binary Search Tree contents:" << endl;
+    // for(BinarySearchTree<char,int>::iterator it = bt.begin(); it != bt.end(); ++it) {
+    //     cout << it->first << " " << it->second << endl;
+    // }
+    // if(bt.find('b') != bt.end()) {
+    //     cout << "Found b" << endl;
+    // }
+    // else {
+    //     cout << "Did not find b" << endl;
+    // }
+    // cout << "Erasing b" << endl;
+    // bt.remove('b');
+    // cout << "Erased b" << endl;
 
     // AVL Tree Tests
     AVLTree<char,int> at;
+    cout << "Created AVL Tree" << endl;
     at.insert(std::make_pair('a',1));
+    cout << "Inserted a" << endl;
     at.insert(std::make_pair('b',2));
+    cout << "Inserted b" << endl;
 
     cout << "\nAVLTree contents:" << endl;
     for(AVLTree<char,int>::iterator it = at.begin(); it != at.end(); ++it) {
@@ -41,8 +46,8 @@ int main(int argc, char *argv[])
     else {
         cout << "Did not find b" << endl;
     }
-    cout << "Erasing b" << endl;
-    at.remove('b');
+    // cout << "Erasing b" << endl;
+    // at.remove('b');
 
     return 0;
 }
